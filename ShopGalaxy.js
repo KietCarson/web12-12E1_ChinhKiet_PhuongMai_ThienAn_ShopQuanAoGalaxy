@@ -5,7 +5,7 @@
                 id: 1,
                 name: "Áo Sao Băng (Stellar T-shirt)",
                 price: 4990000,
-                description: "Công cụ định vị không gian chính xác, sử dụng công nghệ từ trường thiên hà. Thiết kế vỏ hợp kim Titan siêu nhẹ.",
+                description: "Áo sao băng sáng nhất bầu trời đêm, thiết kế bùng cháy và sáng lói",
                 images: ["https://placehold.co/800x600/1e40af/ffffff?text=La+Ban+Sao+Bang+(Main)"]
             },
             {
@@ -26,7 +26,7 @@
                 id: 4,
                 name: "Ly Trường Thiên Thạch",
                 price: 250000,
-                description: "Bản đồ tương tác 3D, hiển thị các trường thiên thạch lớn. Có thể chiếu lên kính chắn gió tàu vũ trụ.",
+                description: "Món quà tặng người thân đầy ý nghĩa và cảm xúc, thể hiện nhiệt huyết tuổi trẻ",
                 images: ["https://placehold.co/800x600/f59e0b/ffffff?text=Ban+Do+Thien+Thach+(Main)"]
             },
         ];
@@ -269,9 +269,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // TODO: Bổ sung logic khi một sản phẩm mới được chọn (trong hàm showProductDetails của bạn)
-    // Khi bạn nhấp vào một sản phẩm trong grid, bạn sẽ cần phải cập nhật:
-    // 1. Ảnh chính (main-product-image.src)
-    // 2. Render lại các ảnh nhỏ (product-thumbnails) dựa trên dữ liệu sản phẩm đó
-    // (Phần này liên quan đến code render sản phẩm hiện tại của bạn trong ShopGalaxy.js)
 });
