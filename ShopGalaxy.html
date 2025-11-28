@@ -82,6 +82,40 @@
                 </div>
             </div>
         </section>
+        <section id="members" class="py-20 md:py-32 border-t border-gray-900 text-white">
+    <h2 class="text-4xl font-bold mb-12 text-center text-yellow-400">Đội Ngũ Xây Dựng Thiên Hà</h2>
+    
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        
+        <div class="bg-gray-900/70 p-6 rounded-xl shadow-xl border border-gray-800 transition transform hover:scale-[1.02] hover:bg-gray-800/80 duration-300">
+            <div class="flex flex-col items-center text-center">
+                <img src="https://placehold.co/150x150/222222/ffffff?text=AVATAR+1" alt="Ảnh thành viên 1" class="w-32 h-32 rounded-full object-cover mb-4 ring-4 ring-yellow-500 ring-offset-4 ring-offset-black">
+                <h3 class="text-2xl font-bold">Lư Chính Kiệt</h3>
+                <p class="text-lg text-gray-400 font-semibold mb-2">Lớp: 12E1</p>
+                <p class="text-sm text-gray-300">Vai trò: Lập trình.</p>
+            </div>
+        </div>
+
+        <div class="bg-gray-900/70 p-6 rounded-xl shadow-xl border border-gray-800 transition transform hover:scale-[1.02] hover:bg-gray-800/80 duration-300">
+            <div class="flex flex-col items-center text-center">
+                <img src="https://placehold.co/150x150/222222/ffffff?text=AVATAR+2" alt="Ảnh thành viên 2" class="w-32 h-32 rounded-full object-cover mb-4 ring-4 ring-yellow-500 ring-offset-4 ring-offset-black">
+                <h3 class="text-2xl font-bold">Nguyễn Thiên An</h3>
+                <p class="text-lg text-gray-400 font-semibold mb-2">Lớp: 12E1</p>
+                <p class="text-sm text-gray-300">Vai trò: Thiết kế UI/UX.</p>
+            </div>
+        </div>
+
+        <div class="bg-gray-900/70 p-6 rounded-xl shadow-xl border border-gray-800 transition transform hover:scale-[1.02] hover:bg-gray-800/80 duration-300">
+            <div class="flex flex-col items-center text-center">
+                <img src="https://placehold.co/150x150/222222/ffffff?text=AVATAR+3" alt="Ảnh thành viên 3" class="w-32 h-32 rounded-full object-cover mb-4 ring-4 ring-yellow-500 ring-offset-4 ring-offset-black">
+                <h3 class="text-2xl font-bold">Trần Phương Mai</h3>
+                <p class="text-lg text-gray-400 font-semibold mb-2">Lớp: 12E1</p>
+                <p class="text-sm text-gray-300">Vai trò: Phát triển Nội dung và hình ảnh.</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
 
         <!-- SHOP SECTION -->
         <section id="shop" class="py-20 md:py-32 border-t border-gray-900">
@@ -90,41 +124,57 @@
             <!-- Grid sản phẩm sẽ được render tại đây bởi JS -->
             
             <!-- Khu vực chi tiết đặt hàng -->
-            <div id="active-product-details" class="mt-16 p-8 bg-gray-900/90 rounded-2xl starry-modal max-w-2xl mx-auto space-y-4 border border-gray-800">
-                <h3 class="text-2xl font-bold border-b border-gray-700 pb-2">ĐẶT HÀNG: <span id="active-product-name" class="text-yellow-400"></span></h3>
-                <p class="text-xl font-semibold text-gray-200">Giá: <span id="active-product-price"></span></p>
+            <div id="active-product-details" class="mt-16 p-8 bg-gray-900/90 rounded-2xl starry-modal max-w-4xl mx-auto space-y-4 border border-gray-800">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+        
+        <div class="space-y-4">
+            <div class="relative rounded-xl overflow-hidden shadow-2xl starry-modal border border-gray-700 h-80">
+                <img id="main-product-image" src="https://placehold.co/800x600/111111/ffffff?text=V%C5%A9+Tr%E1%BB%A5+T%C3%B3i+Gi%E1%BA%A3n" alt="Ảnh chính sản phẩm" class="w-full h-full object-cover transition duration-300">
+            </div>
 
-                <div class="flex items-center space-x-4">
-                    <label for="quantity" class="text-sm font-semibold text-gray-300">Số lượng:</label>
-                    <div class="flex items-center border border-gray-700 rounded-lg overflow-hidden">
-                        <button id="qty-minus" class="p-2 w-10 h-10 bg-gray-800 hover:bg-gray-700 transition flex items-center justify-center">
-                            <i data-lucide="minus" class="w-4 h-4"></i>
-                        </button>
-                        <input type="number" id="quantity" value="1" min="1" class="w-16 h-10 text-center bg-gray-900 border-none focus:ring-0 text-white" readonly>
-                        <button id="qty-plus" class="p-2 w-10 h-10 bg-gray-800 hover:bg-gray-700 transition flex items-center justify-center">
-                            <i data-lucide="plus" class="w-4 h-4"></i>
-                        </button>
-                    </div>
+            <div id="product-thumbnails" class="flex space-x-3 overflow-x-auto p-1">
+                <img src="https://placehold.co/100x100/111111/ffffff?text=View+1" data-image-url="https://placehold.co/800x600/111111/ffffff?text=VIEW+1" class="w-20 h-20 object-cover rounded-lg border-2 border-yellow-500 cursor-pointer thumbnail active-thumbnail">
+                <img src="https://placehold.co/100x100/111111/ffffff?text=View+2" data-image-url="https://placehold.co/800x600/111111/ffffff?text=VIEW+2" class="w-20 h-20 object-cover rounded-lg border-2 border-gray-700 hover:border-yellow-500 cursor-pointer thumbnail">
+                <img src="https://placehold.co/100x100/111111/ffffff?text=View+3" data-image-url="https://placehold.co/800x600/111111/ffffff?text=VIEW+3" class="w-20 h-20 object-cover rounded-lg border-2 border-gray-700 hover:border-yellow-500 cursor-pointer thumbnail">
                 </div>
+        </div>
 
-                <button id="place-order-button" class="w-full py-3 mt-4 text-lg font-bold uppercase rounded-xl bg-yellow-500 text-black hover:bg-yellow-600 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
-                    XÁC NHẬN ĐẶT HÀNG
-                </button>
-                <p id="order-message" class="text-center text-sm text-red-400 flex items-center justify-center gap-2">
-                    <i data-lucide="lock" class="w-4 h-4"></i> Vui lòng đăng nhập để đặt hàng.
-                </p>
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold border-b border-gray-700 pb-2">ĐẶT HÀNG: <span id="active-product-name" class="text-yellow-400">Tên Sản Phẩm</span></h3>
+            <p class="text-xl font-semibold text-gray-200">Giá: <span id="active-product-price">...</span></p>
 
-                <div id="order-history-section" class="pt-6 border-t border-gray-700 mt-6 hidden">
-                    <h4 class="text-xl font-bold mb-4 flex items-center space-x-2">
-                        <i data-lucide="history" class="w-5 h-5"></i>
-                        <span>Lịch Sử Đặt Hàng</span>
-                    </h4>
-                    <div id="order-list" class="space-y-3 max-h-48 overflow-y-auto pr-2 text-sm text-gray-400">
-                        <!-- Lịch sử đơn hàng render tại đây -->
-                        <p>Đang tải dữ liệu...</p>
-                    </div>
+            <div class="flex items-center space-x-4">
+                <label for="quantity" class="text-sm font-semibold text-gray-300">Số lượng:</label>
+                <div class="flex items-center border border-gray-700 rounded-lg overflow-hidden">
+                    <button id="qty-minus" class="p-2 w-10 h-10 bg-gray-800 hover:bg-gray-700 transition flex items-center justify-center">
+                        <i data-lucide="minus" class="w-4 h-4"></i>
+                    </button>
+                    <input type="number" id="quantity" value="1" min="1" class="w-16 h-10 text-center bg-gray-900 border-none focus:ring-0 text-white" readonly>
+                    <button id="qty-plus" class="p-2 w-10 h-10 bg-gray-800 hover:bg-gray-700 transition flex items-center justify-center">
+                        <i data-lucide="plus" class="w-4 h-4"></i>
+                    </button>
                 </div>
             </div>
+
+            <button id="place-order-button" class="w-full py-3 mt-4 text-lg font-bold uppercase rounded-xl bg-yellow-500 text-black hover:bg-yellow-600 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                XÁC NHẬN ĐẶT HÀNG
+            </button>
+            <p id="order-message" class="text-center text-sm text-red-400 flex items-center justify-center gap-2">
+                <i data-lucide="lock" class="w-4 h-4"></i> Vui lòng đăng nhập để đặt hàng.
+            </p>
+
+            <div id="order-history-section" class="pt-6 border-t border-gray-700 mt-6 hidden">
+                <h4 class="text-xl font-bold mb-4 flex items-center space-x-2">
+                    <i data-lucide="history" class="w-5 h-5"></i>
+                    <span>Lịch Sử Đặt Hàng</span>
+                </h4>
+                <div id="order-list" class="space-y-3 max-h-48 overflow-y-auto pr-2 text-sm text-gray-400">
+                    <p>Đang tải dữ liệu...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         </section>
 
         <section id="feedback" class="py-20 md:py-32 border-t border-gray-900">

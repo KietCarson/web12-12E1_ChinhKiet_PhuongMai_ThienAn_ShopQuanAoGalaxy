@@ -232,4 +232,46 @@
                     document.getElementById('quantity').value = currentQuantity;
                 }
             });
-        };
+        };// --- Chức năng Hiển thị Ảnh Chi tiết Sản phẩm ---
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Lấy tham chiếu đến ảnh chính
+    const mainImage = document.getElementById('main-product-image');
+    // 2. Lấy tham chiếu đến khu vực chứa các ảnh nhỏ
+    const thumbnailsContainer = document.getElementById('product-thumbnails');
+
+    if (thumbnailsContainer && mainImage) {
+        // Lắng nghe sự kiện nhấp chuột trên toàn bộ khu vực ảnh nhỏ
+        thumbnailsContainer.addEventListener('click', (event) => {
+            // Đảm bảo chỉ xử lý khi nhấp vào thẻ <img> có class 'thumbnail'
+            const clickedThumbnail = event.target.closest('.thumbnail');
+
+            if (clickedThumbnail) {
+                // Lấy URL ảnh từ thuộc tính data-image-url
+                const newImageUrl = clickedThumbnail.getAttribute('data-image-url');
+                
+                if (newImageUrl) {
+                    // Thay đổi nguồn ảnh chính
+                    mainImage.src = newImageUrl;
+                    
+                    // Cập nhật trạng thái 'active' cho các ảnh nhỏ
+                    document.querySelectorAll('.thumbnail').forEach(thumb => {
+                        thumb.classList.remove('active-thumbnail');
+                        thumb.classList.remove('border-yellow-500');
+                        thumb.classList.add('border-gray-700');
+                    });
+                    
+                    // Thêm trạng thái 'active' cho ảnh vừa nhấp
+                    clickedThumbnail.classList.add('active-thumbnail');
+                    clickedThumbnail.classList.remove('border-gray-700');
+                    clickedThumbnail.classList.add('border-yellow-500');
+                }
+            }
+        });
+    }
+
+    // TODO: Bổ sung logic khi một sản phẩm mới được chọn (trong hàm showProductDetails của bạn)
+    // Khi bạn nhấp vào một sản phẩm trong grid, bạn sẽ cần phải cập nhật:
+    // 1. Ảnh chính (main-product-image.src)
+    // 2. Render lại các ảnh nhỏ (product-thumbnails) dựa trên dữ liệu sản phẩm đó
+    // (Phần này liên quan đến code render sản phẩm hiện tại của bạn trong ShopGalaxy.js)
+});

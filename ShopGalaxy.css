@@ -209,3 +209,19 @@ footer {
     transform: scale(1.2); /* Tăng nhẹ độ phóng to */
     text-shadow: 0 0 5px var(--accent-color);
 }
+/* Trong file style.css */
+.thumbnail {
+    opacity: 0.7; /* Làm mờ ảnh không được chọn */
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+    border-color: #f59e0b; /* Màu vàng của Tailwind - yellow-500 */
+}
+
+.active-thumbnail {
+    opacity: 1; /* Ảnh đang được chọn sẽ sáng */
+    border-color: #f59e0b !important;
+}
