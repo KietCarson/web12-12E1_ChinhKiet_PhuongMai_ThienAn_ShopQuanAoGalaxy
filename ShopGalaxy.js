@@ -3,7 +3,7 @@
         const products = [
             {
                 id: 1,
-                name: "La Bàn Sao Băng (Stellar Compass)",
+                name: "Áo Sao Băng (Stellar T-shirt)",
                 price: 4990000,
                 description: "Công cụ định vị không gian chính xác, sử dụng công nghệ từ trường thiên hà. Thiết kế vỏ hợp kim Titan siêu nhẹ.",
                 images: ["https://placehold.co/800x600/1e40af/ffffff?text=La+Ban+Sao+Bang+(Main)"]
@@ -24,7 +24,7 @@
             },
             {
                 id: 4,
-                name: "Bản Đồ Trường Thiên Thạch",
+                name: "Ly Trường Thiên Thạch",
                 price: 250000,
                 description: "Bản đồ tương tác 3D, hiển thị các trường thiên thạch lớn. Có thể chiếu lên kính chắn gió tàu vũ trụ.",
                 images: ["https://placehold.co/800x600/f59e0b/ffffff?text=Ban+Do+Thien+Thach+(Main)"]
