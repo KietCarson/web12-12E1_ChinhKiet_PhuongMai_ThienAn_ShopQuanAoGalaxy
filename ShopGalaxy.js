@@ -1,36 +1,44 @@
 
         // --- 1. KHỞI TẠO DỮ LIỆU GIẢ ---
         const products = [
-            {
-                id: 1,
-                name: "La Bàn Sao Băng (Stellar Compass)",
-                price: 4990000,
-                description: "Công cụ định vị không gian chính xác, sử dụng công nghệ từ trường thiên hà. Thiết kế vỏ hợp kim Titan siêu nhẹ.",
-                images: ["https://placehold.co/800x600/1e40af/ffffff?text=La+Ban+Sao+Bang+(Main)"]
-            },
-            {
-                id: 2,
-                name: "Chăn Mền Tinh Vân (Nebula Quilt)",
-                price: 1550000,
-                description: "Chăn mền siêu ấm, vật liệu cách nhiệt Nano-Fiber. Thiết kế mô phỏng các dải tinh vân rực rỡ.",
-                images: ["https://placehold.co/800x600/ef4444/ffffff?text=Chan+Men+Tinh+Van+(Main)"]
-            },
-            {
-                id: 3,
-                name: "Giày Cao Cổ Vệ Tinh (Orbital Boots)",
-                price: 8200000,
-                description: "Giày da tổng hợp chịu lực, có đệm khí áp suất thấp. Lý tưởng cho mọi địa hình hành tinh.",
-                images: ["https://placehold.co/800x600/10b981/ffffff?text=Giay+Ve+Tinh+(Main)"]
-            },
-            {
-                id: 4,
-                name: "Bản Đồ Trường Thiên Thạch",
-                price: 250000,
-                description: "Bản đồ tương tác 3D, hiển thị các trường thiên thạch lớn. Có thể chiếu lên kính chắn gió tàu vũ trụ.",
-                images: ["https://placehold.co/800x600/f59e0b/ffffff?text=Ban+Do+Thien+Thach+(Main)"]
-            },
-        ];
-
+    {
+        id: 1,
+        name: "Áo Sao Băng (Stellar T-shirt)",
+        price: 4990000,
+        description: "Áo sao băng sáng nhất bầu trời đêm, thiết kế bùng cháy và sáng lói",
+        // Ảnh 1 (Chính) và Ảnh 2 (Phụ)
+        images: [
+            "áo sao băng1.png",
+            "áo sao băng2.png",
+            
+        ]
+    },
+    // ... các sản phẩm khác ...
+    {
+        id: 2,
+        name: "Giày Cao Cổ Vệ Tinh (Orbital Boots)",
+        price: 8200000,
+        description: "Giày da tổng hợp chịu lực, có đệm khí áp suất thấp. Lý tưởng cho mọi địa hình hành tinh.",
+        // SỬ DỤNG TÊN FILE CỦA BẠN VỚI 2 VIEW KHÁC NHAU
+        images: [
+            "người đi giày.png", // Ảnh chính
+            "góc chính diện của giày.png", // Ảnh phụ
+            "giày góc 3.png"
+        ]
+    },
+    {
+        id: 3,
+        name: "Ly Trường Thiên Thạch",
+        price: 250000,
+        description: "Món quà tặng người thân đầy ý nghĩa và cảm xúc, thể hiện nhiệt huyết tuổi trẻ",
+        // SỬ DỤNG TÊN FILE CỦA BẠN VỚI 2 VIEW KHÁC NHAU
+        images: [
+            "ly đựng nước.png", // Ảnh chính
+            "góc phía sau ly.png", // Ảnh phụ'
+            "góc 3 ly.png"
+        ]
+    },
+];
         // Biến trạng thái
         let currentUser = JSON.parse(localStorage.getItem('galaxy_user')) || null; // Lưu trạng thái đăng nhập vào LocalStorage
         let activeProduct = products[0];
@@ -116,14 +124,41 @@
         }
 
         // --- 4. LOGIC SHOP & ORDER (Giả lập) ---
-        const selectProduct = (product) => {
-            activeProduct = product;
-            currentQuantity = 1;
-            document.getElementById('active-product-name').textContent = product.name;
-            document.getElementById('active-product-price').textContent = formatCurrency(product.price);
-            document.getElementById('quantity').value = 1;
-        };
+    const selectProduct = (product) => {
+    activeProduct = product;
+    currentQuantity = 1;
+    document.getElementById('active-product-name').textContent = product.name;
+    document.getElementById('active-product-price').textContent = formatCurrency(product.price);
+    document.getElementById('quantity').value = 1;
+    // Thêm hàm này vào khu vực LOGIC SHOP & ORDER (Sau selectProduct)
+const updateProductImages = (product) => {
+    const mainImage = document.getElementById('main-product-image');
+    const thumbnailsContainer = document.getElementById('product-thumbnails');
+    
+    // 1. Cập nhật ảnh chính
+    if (mainImage && product.images.length > 0) {
+        mainImage.src = product.images[0]; // Đặt ảnh đầu tiên làm ảnh chính
+    }
 
+    // 2. Cập nhật ảnh nhỏ (Thumbnails)
+    if (thumbnailsContainer) {
+        // Tạo HTML cho tất cả các ảnh nhỏ của sản phẩm
+        thumbnailsContainer.innerHTML = product.images.map((imgUrl, index) => {
+            const isActive = index === 0 ? 'active-thumbnail border-yellow-500' : 'border-gray-700';
+            return `
+                <img 
+                    class="thumbnail border-2 ${isActive} cursor-pointer w-20 h-20 object-cover"
+                    src="${imgUrl}" 
+                    data-image-url="${imgUrl}" 
+                    alt="Ảnh sản phẩm ${index + 1}"
+                >
+            `;
+        }).join('');
+    }
+};
+    // THÊM: Gọi hàm cập nhật ảnh chính và ảnh nhỏ
+    updateProductImages(product); 
+};
         const renderShop = () => {
             const shopSection = document.getElementById('shop');
             let grid = shopSection.querySelector('.grid-container');
@@ -232,4 +267,41 @@
                     document.getElementById('quantity').value = currentQuantity;
                 }
             });
-        };
+        };// --- Chức năng Hiển thị Ảnh Chi tiết Sản phẩm ---
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Lấy tham chiếu đến ảnh chính
+    const mainImage = document.getElementById('main-product-image');
+    // 2. Lấy tham chiếu đến khu vực chứa các ảnh nhỏ
+    const thumbnailsContainer = document.getElementById('product-thumbnails');
+
+    if (thumbnailsContainer && mainImage) {
+        // Lắng nghe sự kiện nhấp chuột trên toàn bộ khu vực ảnh nhỏ
+        thumbnailsContainer.addEventListener('click', (event) => {
+            // Đảm bảo chỉ xử lý khi nhấp vào thẻ <img> có class 'thumbnail'
+            const clickedThumbnail = event.target.closest('.thumbnail');
+
+            if (clickedThumbnail) {
+                // Lấy URL ảnh từ thuộc tính data-image-url
+                const newImageUrl = clickedThumbnail.getAttribute('data-image-url');
+                
+                if (newImageUrl) {
+                    // Thay đổi nguồn ảnh chính
+                    mainImage.src = newImageUrl;
+                    
+                    // Cập nhật trạng thái 'active' cho các ảnh nhỏ
+                    document.querySelectorAll('.thumbnail').forEach(thumb => {
+                        thumb.classList.remove('active-thumbnail');
+                        thumb.classList.remove('border-yellow-500');
+                        thumb.classList.add('border-gray-700');
+                    });
+                    
+                    // Thêm trạng thái 'active' cho ảnh vừa nhấp
+                    clickedThumbnail.classList.add('active-thumbnail');
+                    clickedThumbnail.classList.remove('border-gray-700');
+                    clickedThumbnail.classList.add('border-yellow-500');
+                }
+            }
+        });
+    }
+
+});
