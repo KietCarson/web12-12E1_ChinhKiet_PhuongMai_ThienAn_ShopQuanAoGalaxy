@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalaxyCart | Vũ Trụ Tinh Tú</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="ShopGalaxy.js"></script>
+</head>
+
+<body class="min-h-screen star-bg bg-black">
+
+    <div id="star-field" class="fixed inset-0 pointer-events-none z-[-1]"></div>
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-black/90 border-b border-gray-900 shadow-xl backdrop-blur">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-extrabold tracking-widest text-white flex items-center">
+                <i data-lucide="globe" class="w-6 h-6 mr-2 text-yellow-500"></i>
+                GAL<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalaxyCart | Vũ Trụ Tinh Tú</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="ShopGalaxy.js"></script>
+</head>
+
+<body class="min-h-screen star-bg bg-black text-white">
+    <div id="star-field" class="fixed inset-0 pointer-events-none z-[-1]"></div>
+    ```
+
+    <div id="star-field" class="fixed inset-0 pointer-events-none z-[-1]"></div>
+
+    <header class="sticky top-0 z-50 bg-black/90 border-b border-gray-900 shadow-xl backdrop-blur">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-extrabold tracking-widest text-white flex items-center">
+                <i data-lucide="globe" class="w-6 h-6 mr-2 text-yellow-500"></i>
+                GALAXYCART
+            </a>
+
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#intro" class="text-white hover:text-yellow-400 transition">GIỚI THIỆU</a>
+                <a href="#shop" class="text-white hover:text-yellow-400 transition">SẢN PHẨM</a>
+                <a href="#feedback" class="text-white hover:text-yellow-400 transition">LIÊN HỆ</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button id="login-button"
+                    class="flex items-center space-x-2 p-2 px-4 rounded-full border border-white/20 hover:bg-white/10 transition duration-300">
+                    <i data-lucide="user" class="w-5 h-5 text-white"></i>
+                    <span id="user-display" class="text-xs font-semibold">Đăng nhập</span>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-full hover:bg-white/10 transition">
+                    <i data-lucide="menu" class="w-6 h-6 text-white"></i>
+                </button>
+            </div>
+        </div>
+        <div id="status-bar" class="hidden w-full text-xs py-2 px-4 text-center border-t border-gray-800">
+            <p id="order-status-text" class="tracking-wider text-gray-400"></p>
+        </div>
+    </header>
+    
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-40 hidden md:hidden p-8 transition-opacity duration-300">
+        <button id="close-menu-button" class="absolute top-4 right-4 text-white p-2">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <nav class="flex flex-col space-y-6 text-xl pt-16 font-semibold">
+            <a href="#intro" class="text-white hover:text-gray-400 py-2">GIỚI THIỆU</a>
+            <a href="#shop" class="text-white hover:text-gray-400 py-2">SẢN PHẨM</a>
+            <a href="#feedback" class="text-white hover:text-gray-400 py-2">LIÊN HỆ</a>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 py-12 md:py-20">
+        <section id="home" class="min-h-[60vh] flex items-center justify-center text-center">
+            <div class="max-w-5xl space-y-8">
+                <h1
+                    class="text-6xl md:text-8xl font-black text-white tracking-tighter drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+                    GALAXYCART
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
+                    Khám phá bộ sưu tập trang thiết bị Không gian độc quyền, tối giản và hiệu suất cao.
+                </p>
+                <a href="#shop"
+                    class="inline-block px-10 py-4 mt-8 text-base font-bold uppercase rounded-full bg-yellow-500 text-black hover:bg-yellow-600 transition duration-300 shadow-lg">
+                    CHIÊM NGƯỠNG BỘ SƯU TẬP
+                </a>
+            </div>
+        </section>
+
+        <section id="intro" class="py-20 md:py-32 border-t border-gray-900">
+            <h2 class="text-4xl font-bold mb-10 text-center">Tầm Nhìn Từ Bầu Trời Sao</h2>
+            <div class="grid md:grid-cols-3 gap-12 items-start">
+                <p class="text-lg text-gray-300 leading-relaxed md:col-span-2">
+                    Chúng tôi là GalaxyCart, nhà cung cấp hàng đầu các vật phẩm và thiết bị thế hệ mới được khai sinh từ tinh hoa của vũ trụ. Mỗi thiết kế đều tuân theo chuẩn mực của chủ nghĩa Tối Giản (Minimalist), nơi sự đơn giản tạo nên sức mạnh. Điều đặc biệt là chúng tôi tích hợp công nghệ vật liệu tiên tiến và bền bỉ, đảm bảo chất lượng, hiệu suất và tính thẩm mỹ không thể sánh bằng, xứng tầm với không gian bao la.
+                </p>
+                <div class="relative h-64 rounded-xl overflow-hidden shadow-2xl starry-modal border border-white/10">
+                    <img src="vutru.jpg"
+                        alt="Vũ trụ" class="w-full h-full object-cover opacity-80">
+                </div>
+            </div>
+        </section>
+        
+        <section id="members" class="py-20 md:py-32 border-t border-gray-900 text-white">
+            <h2 class="text-4xl font-bold mb-12 text-center text-yellow-400">Đội Ngũ Xây Dựng Thiên Hà</h2>
+
+            <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+                <div
+                    class="bg-gray-900/70 p-6 rounded-xl shadow-xl border border-gray-800 transition transform hover:scale-[1.02] hover:bg-gray-800/80 duration-300">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="phihanhgia1.jpg" alt="Ảnh thành viên 1"
+                            class="w-32 h-32 rounded-full object-cover mb-4 ring-4 ring-yellow-500 ring-offset-4 ring-offset-black">
+                        <h3 class="text-2xl font-bold">Lư Chính Kiệt</h3>
+                        <p class="text-lg text-gray-400 font-semibold mb-2">Lớp: 12E1</p>
+                        <p class="text-sm text-gray-300">Vai trò: Lập trình.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900/70 p-6 rounded-xl shadow-xl border border-gray-800 transition transform hover:scale-[1.02] hover:bg-gray-800/80 duration-300">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="phihanhgia2.png" alt="Ảnh thành viên 2"
+                            class="w-32 h-32 rounded-full object-cover mb-4 ring-4 ring-yellow-500 ring-offset-4 ring-offset-black">
+                        <h3 class="text-2xl font-bold">Nguyễn Thiên An</h3>
+                        <p class="text-lg text-gray-400 font-semibold mb-2">Lớp: 12E1</p>
+                        <p class="text-sm text-gray-300">Vai trò: Thiết kế UI/UX.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900/70 p-6 rounded-xl shadow-xl border border-gray-800 transition transform hover:scale-[1.02] hover:bg-gray-800/80 duration-300">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="phihanhgia3.png" alt="Ảnh thành viên 3"
+                            class="w-32 h-32 rounded-full object-cover mb-4 ring-4 ring-yellow-500 ring-offset-4 ring-offset-black">
+                        <h3 class="text-2xl font-bold">Trần Phương Mai</h3>
+                        <p class="text-lg text-gray-400 font-semibold mb-2">Lớp: 12E1</p>
+                        <p class="text-sm text-gray-300">Vai trò: Phát triển Nội dung và hình ảnh.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="shop" class="py-20 md:py-32 border-t border-gray-900">
+            <h2 class="text-4xl font-bold mb-12 text-center">Bộ Sưu Tập Thiết Bị Không Gian</h2>
+
+            <div id="active-product-details"
+                class="mt-16 p-8 bg-gray-900/90 rounded-2xl starry-modal max-w-4xl mx-auto space-y-4 border border-gray-800">
+
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+
+                    <div class="space-y-4">
+                        <div id="product-image-display" 
+                            class="relative rounded-xl overflow-hidden shadow-2xl starry-modal border border-gray-700 h-80">
+                            
+                            <img 
+                                id="main-product-image" 
+                                src="ly_dung_nuoc.png" 
+                                alt="Ảnh chính sản phẩm"
+                                class="w-full h-full object-cover transition duration-300">
+
+                            <button id="carousel-prev"
+                                class="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 p-2 rounded-full text-white z-10">
+                                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                            </button>
+
+                            <button id="carousel-next"
+                                class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 p-2 rounded-full text-white z-10">
+                                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                        
+                        <div id="product-thumbnails" class="flex space-x-3 overflow-x-auto p-1 justify-center">
+                            <img 
+                                id="thumb-1"
+                                class="thumbnail border-2 border-yellow-500 active-thumbnail cursor-pointer w-20 h-20 object-cover"
+                                src="ly_dung_nuoc.png" 
+                                data-image-url="ly_dung_nuoc.png"
+                                alt="Ảnh sản phẩm 1">
+                            
+                            <img 
+                                id="thumb-2"
+                                class="thumbnail border-2 border-gray-700 cursor-pointer w-20 h-20 object-cover"
+                                src="nguoi_di_giay.png" 
+                                data-image-url="nguoi_di_giay.png"
+                                alt="người đi giày.png">
+                            
+                            <img 
+                                id="thumb-3"
+                                class="thumbnail border-2 border-gray-700 cursor-pointer w-20 h-20 object-cover"
+                                src="goc_phuong_sau_ly.png" 
+                                data-image-url="goc_phuong_sau_ly.png"
+                                alt="Ảnh sản phẩm 3">
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold border-b border-gray-700 pb-2">ĐẶT HÀNG: <span
+                                id="active-product-name" class="text-yellow-400">Tên Sản Phẩm</span></h3>
+                        <p class="text-xl font-semibold text-gray-200">Giá: <span id="active-product-price">...</span></p>
+
+                        <div class="flex items-center space-x-4">
+                            <label for="quantity" class="text-sm font-semibold text-gray-300">Số lượng:</label>
+                            <div class="flex items-center border border-gray-700 rounded-lg overflow-hidden">
+                                <button id="qty-minus"
+                                    class="p-2 w-10 h-10 bg-gray-800 hover:bg-gray-700 transition flex items-center justify-center">
+                                    <i data-lucide="minus" class="w-4 h-4"></i>
+                                </button>
+                                <input type="number" id="quantity" value="1" min="1"
+                                    class="w-16 h-10 text-center bg-gray-900 border-none focus:ring-0 text-white"
+                                    readonly>
+                                <button id="qty-plus"
+                                    class="p-2 w-10 h-10 bg-gray-800 hover:bg-gray-700 transition flex items-center justify-center">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <button id="place-order-button"
+                            class="w-full py-3 mt-4 text-lg font-bold uppercase rounded-xl bg-yellow-500 text-black hover:bg-yellow-600 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                            disabled>XÁC NHẬN ĐẶT HÀNG
+                        </button>
+                        <p id="order-message" class="text-center text-sm text-red-400 flex items-center justify-center gap-2">
+                            <i data-lucide="lock" class="w-4 h-4"></i> Vui lòng đăng nhập để đặt hàng.
+                        </p>
+
+                        <div id="order-history-section" class="pt-6 border-t border-gray-700 mt-6 hidden">
+                            <h4 class="text-xl font-bold mb-4 flex items-center space-x-2">
+                                <i data-lucide="history" class="w-5 h-5"></i>
+                                <span>Lịch Sử Đặt Hàng</span>
+                            </h4>
+                            <div id="order-list" class="space-y-3 max-h-48 overflow-y-auto pr-2 text-sm text-gray-400">
+                                <p>Tôi đang tải dữ liệu...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback" class="py-20 md:py-32 border-t border-gray-900">
+            <h2 class="text-4xl font-bold mb-12 text-center">Gửi Lời Nhắn Đến Thiên Hà</h2>
+            <div class="max-w-xl mx-auto p-8 bg-gray-900 rounded-2xl shadow-xl starry-modal border border-gray-800">
+                <form id="feedback-form" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300">Tên của bạn</label>
+                        <input type="text" required
+                            class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white focus:ring-yellow-500 focus:border-yellow-500 p-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300">Email</label>
+                        <input type="email" required
+                            class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white focus:ring-yellow-500 focus:border-yellow-500 p-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300">Nội dung</label>
+                        <textarea rows="4" required
+                            class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white focus:ring-yellow-500 focus:border-yellow-500 p-2"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full py-3 px-4 rounded-lg font-bold text-black bg-white hover:bg-gray-300 transition">
+                        GỬI GÓP Ý
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-900 py-6 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 GalaxyCart. Mọi quyền được bảo lưu bởi vũ trụ.</p>
+        <p class="text-xs mt-1">User ID: <span id="current-user-id" class="text-gray-600">...</span></p>
+    </footer>
+
+    <div id="login-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-md transition-all duration-300"></div>
+        <div class="relative w-full max-w-md p-1 mx-4">
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 animate-pulse">
+            </div>
+            <div class="relative bg-black rounded-2xl p-8 login-star-effect shadow-2xl">
+                <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white transition">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+                <div class="text-center mb-6">
+                    <div class="mx-auto w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-3">
+                        <i data-lucide="rocket" class="w-6 h-6 text-yellow-400"></i>
+                    </div>
+                    <h2 id="auth-title" class="text-2xl font-bold text-white tracking-wider">ĐĂNG NHẬP VỆ TINH</h2>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Hệ thống an ninh ngân hà</p>
+                </div>
+                <form id="auth-form" class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Email</label>
+                        <div class="relative">
+                            <i data-lucide="mail" class="absolute left-3 top-2.5 w-5 h-5 text-gray-500"></i>
+                            <input type="email" id="auth-email" required
+                                class="w-full bg-gray-900 border border-gray-700 text-white rounded-lg py-2.5 pl-10 pr-4 focus:ring-1 focus:ring-yellow-500"
+                                placeholder="name@galaxy.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Mật khẩu</label>
+                        <div class="relative">
+                            <i data-lucide="lock" class="absolute left-3 top-2.5 w-5 h-5 text-gray-500"></i>
+                            <input type="password" id="auth-password" required
+                                class="w-full bg-gray-900 border border-gray-700 text-white rounded-lg py-2.5 pl-10 pr-4 focus:ring-1 focus:ring-yellow-500"
+                                placeholder="••••••••">
+                        </div>
+                    </div>
+                    <p id="auth-message" class="text-red-400 text-sm text-center hidden bg-red-900/20 py-2 rounded"></p>
+                    <button type="submit" id="auth-submit-btn"
+                        class="w-full py-3 bg-gradient-to-r from-yellow-600 to-yellow-400 hover:from-yellow-500 text-black font-bold rounded-lg shadow-lg">KẾT
+                        NỐI NGAY</button>
+                </form>
+                <div class="mt-6 text-center pt-4 border-t border-gray-800">
+                    <p id="auth-toggle-link" class="text-sm text-gray-400">Chưa có hộ chiếu? <span
+                            class="text-yellow-400 font-bold cursor-pointer hover:underline">Đăng ký ngay</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>GAXYCART
+            </a>
+
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#intro" class="text-white hover:text-yellow-400 transition">GIỚI THIỆU</a>
+                <a href="#shop" class="text-white hover:text-yellow-400 transition">SẢN PHẨM</a>
+                <a href="#feedback" class="text-white hover:text-yellow-400 transition">LIÊN HỆ</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button id="login-button"
+                    class="flex items-center space-x-2 p-2 px-4 rounded-full border border-white/20 hover:bg-white/10 transition duration-300">
+                    <i data-lucide="user" class="w-5 h-5 text-white"></i>
+                    <span id="user-display" class="text-xs font-semibold">Đăng nhập</span>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-full hover:bg-white/10 transition">
+                    <i data-lucide="menu" class="w-6 h-6 text-white"></i>
+                </button>
+            </div>
+        </div>
+        <div id="status-bar" class="hidden w-full text-xs py-2 px-4 text-center border-t border-gray-800">
+            <p id="order-status-text" class="tracking-wider text-gray-400"></p>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-40 hidden md:hidden p-8 transition-opacity duration-300">
+        <button id="close-menu-button" class="absolute top-4 right-4 text-white p-2">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <nav class="flex flex-col space-y-6 text-xl pt-16 font-semibold">
+            <a href="#intro" class="text-white hover:text-gray-400 py-2">GIỚI THIỆU</a>
+            <a href="#shop" class="text-white hover:text-gray-400 py-2">SẢN PHẨM</a>
+            <a href="#feedback" class="text-white hover:text-gray-400 py-2">LIÊN HỆ</a>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 py-12 md:py-20">
+        <!-- HERO SECTION -->
+        <section id="home" class="min-h-[60vh] flex items-center justify-center text-center">
+            <div class="max-w-5xl space-y-8">
+                <h1
+                    class="text-6xl md:text-8xl font-black text-white tracking-tighter drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+                    GALAXYCART
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
+                    Khám phá bộ sưu tập trang thiết bị Không gian độc quyền, tối giản và hiệu suất cao.
+                </p>
+                <a href="#shop"
+                    class="inline-block px-10 py-4 mt-8 text-base font-bold uppercase rounded-full bg-yellow-500 text-black hover:bg-yellow-600 transition duration-300 shadow-lg">
+                    CHIÊM NGƯỠNG BỘ SƯU TẬP
+                </a>
+                </a>
+            </div>
+        </section>
+
+        <section id="intro" class="py-20 md:py-32 border-t border-gray-900">
+            <h2 class="text-4xl font-bold mb-10 text-center">Tầm Nhìn Từ Bầu Trời Sao</h2>
+            <div class="grid md:grid-cols-3 gap-12 items-start">
+                <p class="text-lg text-gray-300 leading-relaxed md:col-span-2">
+                    GalaxyCart chuyên cung cấp các thiết bị và vật phẩm lấy cảm hứng từ vũ trụ, được thiết kế với triết
+                    lý Tối Giản (Minimalist) và công nghệ vật liệu tiên tiến.
+                </p>
+                <div class="relative h-64 rounded-xl overflow-hidden shadow-2xl starry-modal border border-white/10">
+                    <img src="https://placehold.co/800x600/111111/ffffff?text=V%C5%A9+Tr%E1%BB%A5+T%C3%B3i+Gi%E1%BA%A3n"
+                        alt="Vũ trụ" class="w-full h-full object-cover opacity-80">
+                </div>
+            </div>
+        </section>
+        <section id="members" class="py-20 md:py-32 border-t border-gray-900 text-white">
+            <h2 class="text-4xl font-bold mb-12 text-center text-yellow-400">Đội Ngũ Xây Dựng Thiên Hà</h2>
+
+            <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+                <div
+                    class="bg-gray-900/70 p-6 rounded-xl shadow-xl border border-gray-800 transition transform hover:scale-[1.02] hover:bg-gray-800/80 duration-300">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="https://placehold.co/150x150/222222/ffffff?text=AVATAR+1" alt="Ảnh thành viên 1"
+                            class="w-32 h-32 rounded-full object-cover mb-4 ring-4 ring-yellow-500 ring-offset-4 ring-offset-black">
+                        <h3 class="text-2xl font-bold">Lư Chính Kiệt</h3>
+                        <p class="text-lg text-gray-400 font-semibold mb-2">Lớp: 12E1</p>
+                        <p class="text-sm text-gray-300">Vai trò: Lập trình.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900/70 p-6 rounded-xl shadow-xl border border-gray-800 transition transform hover:scale-[1.02] hover:bg-gray-800/80 duration-300">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="https://placehold.co/150x150/222222/ffffff?text=AVATAR+2" alt="Ảnh thành viên 2"
+                            class="w-32 h-32 rounded-full object-cover mb-4 ring-4 ring-yellow-500 ring-offset-4 ring-offset-black">
+                        <h3 class="text-2xl font-bold">Nguyễn Thiên An</h3>
+                        <p class="text-lg text-gray-400 font-semibold mb-2">Lớp: 12E1</p>
+                        <p class="text-sm text-gray-300">Vai trò: Thiết kế UI/UX.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-900/70 p-6 rounded-xl shadow-xl border border-gray-800 transition transform hover:scale-[1.02] hover:bg-gray-800/80 duration-300">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="https://placehold.co/150x150/222222/ffffff?text=AVATAR+3" alt="Ảnh thành viên 3"
+                            class="w-32 h-32 rounded-full object-cover mb-4 ring-4 ring-yellow-500 ring-offset-4 ring-offset-black">
+                        <h3 class="text-2xl font-bold">Trần Phương Mai</h3>
+                        <p class="text-lg text-gray-400 font-semibold mb-2">Lớp: 12E1</p>
+                        <p class="text-sm text-gray-300">Vai trò: Phát triển Nội dung và hình ảnh.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SHOP SECTION -->
+        <section id="shop" class="py-20 md:py-32 border-t border-gray-900">
+            <h2 class="text-4xl font-bold mb-12 text-center">Bộ Sưu Tập Thiết Bị Không Gian</h2>
+
+            <!-- Grid sản phẩm sẽ được render tại đây bởi JS -->
+
+            <!-- Khu vực chi tiết đặt hàng -->
+           <div id="active-product-details"
+    class="mt-16 p-8 bg-gray-900/90 rounded-2xl starry-modal max-w-4xl mx-auto space-y-4 border border-gray-800">
+
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+
+        <div class="space-y-4">
+            <div class="relative rounded-xl overflow-hidden shadow-2xl starry-modal border border-gray-700 h-80">
+                <img 
+                    id="main-product-image" 
+                    src="ly_dung_nuoc.png" 
+                    alt="Ảnh chính sản phẩm"
+                    class="w-full h-full object-cover transition duration-300">
+            </div>
+
+            <div id="product-thumbnails" class="flex space-x-3 overflow-x-auto p-1">
+                <img 
+                    id="thumb-1"
+                    class="thumbnail border-2 border-yellow-500 active-thumbnail cursor-pointer w-20 h-20 object-cover"
+                    src="ly_dung_nuoc.png" 
+                    data-image-url="ly_dung_nuoc.png"
+                    alt="Ảnh sản phẩm 1">
+                
+                <img 
+                    id="thumb-2"
+                    class="thumbnail border-2 border-gray-700 cursor-pointer w-20 h-20 object-cover"
+                    src="nguoi_di_giay.png" 
+                    data-image-url="nguoi_di_giay.png"
+                    alt="người đi giày.png">
+                
+                <img 
+                    id="thumb-3"
+                    class="thumbnail border-2 border-gray-700 cursor-pointer w-20 h-20 object-cover"
+                    src="goc_phuong_sau_ly.png" 
+                    data-image-url="goc_phuong_sau_ly.png"
+                    alt="Ảnh sản phẩm 3">
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold border-b border-gray-700 pb-2">ĐẶT HÀNG: <span
+                    id="active-product-name" class="text-yellow-400">Tên Sản Phẩm</span></h3>
+            <p class="text-xl font-semibold text-gray-200">Giá: <span id="active-product-price">...</span></p>
+
+            <div class="flex items-center space-x-4">
+                <label for="quantity" class="text-sm font-semibold text-gray-300">Số lượng:</label>
+                <div class="flex items-center border border-gray-700 rounded-lg overflow-hidden">
+                    <button id="qty-minus"
+                        class="p-2 w-10 h-10 bg-gray-800 hover:bg-gray-700 transition flex items-center justify-center">
+                        <i data-lucide="minus" class="w-4 h-4"></i>
+                    </button>
+                    <input type="number" id="quantity" value="1" min="1"
+                        class="w-16 h-10 text-center bg-gray-900 border-none focus:ring-0 text-white"
+                        readonly>
+                    <button id="qty-plus"
+                        class="p-2 w-10 h-10 bg-gray-800 hover:bg-gray-700 transition flex items-center justify-center">
+                        <i data-lucide="plus" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <button id="place-order-button"
+                class="w-full py-3 mt-4 text-lg font-bold uppercase rounded-xl bg-yellow-500 text-black hover:bg-yellow-600 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled>XÁC NHẬN ĐẶT HÀNG
+            </button>
+            <p id="order-message" class="text-center text-sm text-red-400 flex items-center justify-center gap-2">
+                <i data-lucide="lock" class="w-4 h-4"></i> Vui lòng đăng nhập để đặt hàng.
+            </p>
+
+            <div id="order-history-section" class="pt-6 border-t border-gray-700 mt-6 hidden">
+                <h4 class="text-xl font-bold mb-4 flex items-center space-x-2">
+                    <i data-lucide="history" class="w-5 h-5"></i>
+                    <span>Lịch Sử Đặt Hàng</span>
+                </h4>
+                <div id="order-list" class="space-y-3 max-h-48 overflow-y-auto pr-2 text-sm text-gray-400">
+                    <p>Tôi đang tải dữ liệu...</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+        </section>
+
+        <section id="feedback" class="py-20 md:py-32 border-t border-gray-900">
+            <h2 class="text-4xl font-bold mb-12 text-center">Gửi Lời Nhắn Đến Thiên Hà</h2>
+            <div class="max-w-xl mx-auto p-8 bg-gray-900 rounded-2xl shadow-xl starry-modal border border-gray-800">
+                <form id="feedback-form" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300">Tên của bạn</label>
+                        <input type="text" required
+                            class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white focus:ring-yellow-500 focus:border-yellow-500 p-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300">Email</label>
+                        <input type="email" required
+                            class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white focus:ring-yellow-500 focus:border-yellow-500 p-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300">Nội dung</label>
+                        <textarea rows="4" required
+                            class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white focus:ring-yellow-500 focus:border-yellow-500 p-2"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full py-3 px-4 rounded-lg font-bold text-black bg-white hover:bg-gray-300 transition">
+                        GỬI GÓP Ý
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-900 py-6 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 GalaxyCart. Mọi quyền được bảo lưu bởi vũ trụ.</p>
+        <p class="text-xs mt-1">User ID: <span id="current-user-id" class="text-gray-600">...</span></p>
+    </footer>
+
+    <!-- MODAL ĐĂNG NHẬP -->
+    <div id="login-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-md transition-all duration-300"></div>
+        <div class="relative w-full max-w-md p-1 mx-4">
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 animate-pulse">
+            </div>
+            <div class="relative bg-black rounded-2xl p-8 login-star-effect shadow-2xl">
+                <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white transition">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+                <div class="text-center mb-6">
+                    <div class="mx-auto w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-3">
+                        <i data-lucide="rocket" class="w-6 h-6 text-yellow-400"></i>
+                    </div>
+                    <h2 id="auth-title" class="text-2xl font-bold text-white tracking-wider">ĐĂNG NHẬP VỆ TINH</h2>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Hệ thống an ninh ngân hà</p>
+                </div>
+                <form id="auth-form" class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Email</label>
+                        <div class="relative">
+                            <i data-lucide="mail" class="absolute left-3 top-2.5 w-5 h-5 text-gray-500"></i>
+                            <input type="email" id="auth-email" required
+                                class="w-full bg-gray-900 border border-gray-700 text-white rounded-lg py-2.5 pl-10 pr-4 focus:ring-1 focus:ring-yellow-500"
+                                placeholder="name@galaxy.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Mật khẩu</label>
+                        <div class="relative">
+                            <i data-lucide="lock" class="absolute left-3 top-2.5 w-5 h-5 text-gray-500"></i>
+                            <input type="password" id="auth-password" required
+                                class="w-full bg-gray-900 border border-gray-700 text-white rounded-lg py-2.5 pl-10 pr-4 focus:ring-1 focus:ring-yellow-500"
+                                placeholder="••••••••">
+                        </div>
+                    </div>
+                    <p id="auth-message" class="text-red-400 text-sm text-center hidden bg-red-900/20 py-2 rounded"></p>
+                    <button type="submit" id="auth-submit-btn"
+                        class="w-full py-3 bg-gradient-to-r from-yellow-600 to-yellow-400 hover:from-yellow-500 text-black font-bold rounded-lg shadow-lg">KẾT
+                        NỐI NGAY</button>
+                </form>
+                <div class="mt-6 text-center pt-4 border-t border-gray-800">
+                    <p id="auth-toggle-link" class="text-sm text-gray-400">Chưa có hộ chiếu? <span
+                            class="text-yellow-400 font-bold cursor-pointer hover:underline">Đăng ký ngay</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
